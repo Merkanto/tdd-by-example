@@ -5,11 +5,8 @@ public class Money {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
 
         Money money = (Money) o;
-
-        return amount == money.amount;
+        return amount == money.amount && this.getClass().equals(o.getClass());
     }
 }
